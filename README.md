@@ -48,3 +48,32 @@ flutter pub get
 # 2. Lancer l'application sur votre appareil de test
 flutter run
 ```
+
+
+---
+
+## 🏗️ 5. Architecture du Projet et Structure des Fichiers
+Le projet respecte l'organisation standard recommandée pour une application Flutter évolutive :
+* **`lib/` :** Contient l'ensemble du code Dart (fichiers sources et logique applicative).
+* **`assets/` :** Répertoire dédié aux ressources locales, incluant les images et icônes affichées dans l'application.
+* **Dossiers de plateformes (`android/`, `ios/`, `web/`) :** Contiennent les configurations natives générées automatiquement par le framework.
+* **`pubspec.yaml` :** Fichier central de configuration pour la gestion des assets et des versions des dépendances.
+
+---
+
+## 🛠️ 6. Résolution des Problèmes et Bonnes Pratiques (Linting)
+Durant la phase de développement, une attention particulière a été portée à la qualité du code et au respect des standards de Dart :
+
+* **Gestion des Dépendances (`depend_on_referenced_packages`) :** Correction des avertissements du linter en déclarant explicitement le package de composants visuels de Flutter dans le bloc principal des dépendances du projet.
+* **Optimisation du Rendu (`prefer_const_constructors`) :** Application systématique du mot-clé `const` sur les constructeurs de widgets immutables (comme les styles de texte ou les dispositions fixes). Cela permet de soulager le moteur de rendu de Flutter en évitant des reconstructions inutiles.
+* **Nettoyage du Cache :** Utilisation ponctuelle des outils de nettoyage (`flutter clean`) pour garantir la stabilité de l'application lors du déploiement sur les émulateurs de test.
+
+---
+
+## 🎓 7. Conclusion et Perspectives Académiques
+Cette première activité a permis de valider la prise en main de l'écosystème Flutter et l'application des concepts de Material Design pour la création d'interfaces utilisateur mobiles. 
+
+Les prochaines étapes d'apprentissage incluront :
+1. La mise en place d'un système de routage et de navigation multi-écrans complet.
+2. La gestion dynamique des états des widgets (`StatefulWidget`).
+3. La connexion à des API distantes pour alimenter l'application avec des flux d'informations en temps réel.
